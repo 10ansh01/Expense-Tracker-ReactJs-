@@ -49,13 +49,13 @@ const ExpenseForm = (props) => {
         e.preventDefault() //by default when we submit through a button, the page gets reloaded so we are preventing the deafault page load behaviour
         const expenseData = {
             title: title,
-            amount: amount,
+            amount: +amount,
             date: new Date(date)
         }
         props.setSavedExpenseData(expenseData)
         setEnteredTitle('');
         setEnteredAmount('');
-        setEnteredDate('');
+        setEnteredDate(''); 
     }
 
     return (
